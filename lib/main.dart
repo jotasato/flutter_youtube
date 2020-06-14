@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutterprovider/MainModel.dart';
+import 'package:flutterprovider/main_model.dart';
+import 'package:flutterprovider/book_list_page.dart';
 import 'package:provider/provider.dart';
 
 void main() => runApp(MyApp());
@@ -29,6 +30,10 @@ class MyApp extends StatelessWidget {
                     child: Text('ボタン'),
                     onPressed: () {
                       //ここで何か
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => BookListPage()),
+                      );
                       model.changeKboyText();
                     },
                   ),

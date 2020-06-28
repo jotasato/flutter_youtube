@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutterprovider/presentation/book_list/book_list_page.dart';
+import 'package:flutterprovider/login/login_page.dart';
 import 'package:flutterprovider/presentation/main/main_model.dart';
+import 'package:flutterprovider/presentation/signup/signup_page.dart';
 import 'package:provider/provider.dart';
 
 void main() => runApp(MyApp());
@@ -27,12 +28,22 @@ class MyApp extends StatelessWidget {
                     ),
                   ),
                   RaisedButton(
-                    child: Text('ボタン'),
+                    child: Text('新規登録'),
                     onPressed: () {
                       // ここでなにか
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => BookListPage()),
+                        MaterialPageRoute(builder: (context) => SignUpPage()),
+                      );
+                    },
+                  ),
+                  RaisedButton(
+                    child: Text('ログイン'),
+                    onPressed: () {
+                      // ここでなにか
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => LoginPage()),
                       );
                     },
                   ),
